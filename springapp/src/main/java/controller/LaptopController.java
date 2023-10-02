@@ -12,6 +12,22 @@ public class LaptopController{
 
     @PostMapping
     public boolean addLaptop(@RequestBody Laptop laptop){
+        if(laptops == null){
+            laptops = new ArrayList<>();
+        }
+        laptops.add(laptop);
+        return true;
+    }
+
+    @GetMapping("/{laptopId}")
+    public Laptop getLaptopById(@PathVariable int laptopId){
+        return laptops.stream().filter(laptop -> laptop.getLaptopid() == laptopId).findFirst().orElse(null);
+
+    }
+
+    @GetMapping
+    public List<Laptop> getAllLaptops(){
         
     }
+
 }
