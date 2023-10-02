@@ -1,3 +1,6 @@
+package com.examly.springapp.service;
+import com.examly.springapp.model.Laptop;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,5 +19,9 @@ public class ApiService {
 
         }
         return null;
+    }
+
+    public List<Laptop> getAllLaptops(){
+        return laptops;
     }
 }
