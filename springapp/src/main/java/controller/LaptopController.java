@@ -27,7 +27,7 @@ public class LaptopController{
 
     @GetMapping
     public List<Laptop> getAllLaptops(){
-        
+        return laptops;
     }
 
 }
